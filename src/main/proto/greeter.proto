@@ -4,14 +4,17 @@ package org.example.grpc;
 option java_multiple_files = true;
 option java_package = "o.m.t";
 
+// The Service which will respond to client requests
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
 }
 
+// The message to send
 message HelloRequest {
   string name = 1;
 }
 
+// The reply message
 message HelloReply {
   string message = 1;
 }
